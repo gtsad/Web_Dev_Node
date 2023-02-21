@@ -18,8 +18,10 @@ async function getapi(url) {
     var template = Handlebars.compile(` {{#each .}}
     <div id="cart_item">
       <div id="cart_img_container"><img src='{{this.img}}' alt="0" /></div>
+      <div id="titleandprice"> 
       <div id="cart-item-title"><h2>{{this.title}}</h2></div>
-      <div id="cart-item-price"><h2 >{{this.price}}$ </h2></div>
+      <div id="cart-item-price"><h2 >{{this.price}}$ </h2></div></div>
+     
       <div id="meter" >
         <div><button onclick="increaseQuantity('{{this.id}}','{{this.price}}')"
          class="quant" id="plus">+</button></div>

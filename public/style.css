@@ -245,10 +245,30 @@ h1 {
   align-items: center;
 }
 
-#cart-item-price {
-  margin-left: auto;
-  margin-right: 100px;
+#titleandprice{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 40%;
+ 
 }
+
+
+#titleandprice h2{
+
+ margin: 0;
+}
+
+#cart-item-price{
+  color: #5f5f5f;
+}
+
+
+
+#meter{
+  margin-left: auto;
+}
+
 
 #cart_container {
   padding: 50px;
@@ -1067,26 +1087,36 @@ input[type="checkbox"] {
     width: 100px;
   }
 
+
+
+
+  .cart_card {
+    text-align: center;
+    background-color: white;
+    margin: 5rem 10%;
+    margin-bottom: 20px;
+    box-shadow: 10px 14px 100px -30px rgb(122, 122, 122);
+    border-radius: 70px;
+  }
+
+
+  #meter{
+    margin-left: auto;
+  }
+
   #cart_item h2 {
     font-size: 15px;
   }
 
-  #cart-item-title {
-    display: none;
-  }
-
-  #cart-item-price {
-    margin: 0;
-    margin-right: 20px;
-    /* margin-right: 100px; */
-  }
 
   #cart_container {
-    padding: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 50px;
   }
+
+
 
   /*-------Product-------*/
 

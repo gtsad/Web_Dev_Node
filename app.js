@@ -8,7 +8,7 @@ const sessions = require("express-session");
 const { json } = require("express");
 
 app.listen(port, () => {
-  console.log("App listening to port ${port}");
+  console.log(`App listening to port ${port}`);
 });
 
 app.use(express.json());
@@ -197,7 +197,7 @@ app.get("/getcart", (req, res) => {
 app.get("/cart", (req, res) => {
   if (
     user.username === req.query.username &&
-   user.sessionid === req.query.sessionid
+    user.sessionid === req.query.sessionid
   ) {
     var options = {
       root: path.join(__dirname, "public"),

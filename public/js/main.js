@@ -1,14 +1,10 @@
 function fetchAndShowProducts(sub_id) {
+  const currentUrl = window.location.search;
+  const parmsFromUrl = new URLSearchParams(currentUrl);
 
+  var id = parmsFromUrl.get("categoryId");
 
-const currentUrl = window.location.search;
-const parmsFromUrl = new URLSearchParams(currentUrl);
-
-  var id = parmsFromUrl.get('categoryId')
-
-
-
-console.log(id);
+  console.log(id);
   var api_url = "https://wiki-shop.onrender.com/categories/" + id + "/products";
   var template = "products-template";
   var div = "items_grid";
@@ -84,12 +80,11 @@ function fetchAndShow(api_url, template, div, specific_el, id, subCat) {
 function changeFunc(value) {
   var boxes = document.querySelectorAll(".product_card");
 
-
   if (value === "all") {
     boxes.forEach((boxes) => {
       boxes.style.display = "flex";
     });
-  }else{
+  } else {
     boxes.forEach((boxes) => {
       boxes.style.display = "flex";
       if (boxes.dataset.sub_id !== value) {
@@ -97,8 +92,4 @@ function changeFunc(value) {
       }
     });
   }
-
-
-
- 
 }
